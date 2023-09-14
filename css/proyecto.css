@@ -1,0 +1,142 @@
+/*Root*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+:root{
+    --font: 'Roboto Slab', serif;
+    --regular: 400;
+    --medium: 500;
+    --semiBold:600;
+    --bold:700;
+    --white: #ffffff;
+    --black: #000000;
+    --primary-color: #ffa600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+/*Navbar*/
+.navbar-brand{
+    font-size: 28px;
+}
+.navbar-brand > span {
+    color: var(--primary-color);
+}
+/*Encabezado*/
+.encabezado-img{
+    background-image: url(../assets/desarrollador_web.webp);
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.encabezado-img > .animation> p{
+    font: var(--font);
+    font-weight: var(--bold);
+    color: var(--white);
+    font-size: 10rem;
+    
+}
+
+.animation{
+    animation-name: escala;
+    animation-duration: 0.5s;
+}
+
+@keyframes escala {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.titulo{
+    font: var(--font);
+    font-weight: var(--bold);
+    font-size: 5rem;
+    color: var(--black);
+    }
+    
+.titulo > span{
+    color: var(--primary-color);
+    font-size: 5rem;
+    }
+
+.descripcion{
+    font-size: 1.5rem;
+}
+
+.subtitulo{
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.imagen-dev{
+    width: 600px;
+    height: 500px;
+}
+
+.titulo2{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width:1024px) {
+    .encabezado-img > .animation> p{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width:868px) {
+    .encabezado-img > .animation> p{
+        font-size: 4rem;
+    }
+    .imagen-dev{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .burger{
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .imagen-dev{
+        display: none;
+    }
+
+    .titulo{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 3.5rem;
+        color: var(--black);
+        }
+        
+    .titulo > span{
+        color: var(--primary-color);
+        font-size: 3rem;
+        }
+
+    .encabezado-img > .animation> p{
+        font-size: 3.5rem;
+    }
+}

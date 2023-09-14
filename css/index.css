@@ -1,0 +1,209 @@
+/*Root*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+:root{
+    --font: 'Roboto Slab', serif;
+    --regular: 400;
+    --medium: 500;
+    --semiBold:600;
+    --bold:700;
+    --white: #ffffff;
+    --black: #000000;
+    --primary-color: #ffa600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+/*Navbar*/
+.navbar-brand{
+    font-size: 28px;
+}
+.navbar-brand > span {
+    color: var(--primary-color);
+}
+/*Encabezado*/
+.encabezado-img{
+    background-image: url(../assets/shutterstock_2148239031176.png);
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.encabezado-img > .animation> p{
+    font: var(--font);
+    font-weight: var(--semiBold);
+    color: var(--white);
+    font-size: 2.5rem;
+}
+.encabezado-img > .animation > h1{
+    font: var(--font);
+    font-weight: var(--bold);
+    font-size: 10rem;
+    color: var(--white);
+}
+.encabezado-img > .animation > h1 > span{
+    font: var(--font);
+    font-weight: var(--bold);
+    font-size: 8rem;
+    color: var(--primary-color);
+}
+
+.animation{
+    animation-name: escala;
+    animation-duration: 0.5s;
+}
+
+@keyframes escala {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/*video*/
+.video-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.video{
+    width: 95vw;
+    height: 70vh;
+}
+
+.titulo{
+    font: var(--font);
+    font-weight: var(--bold);
+    font-size: 10rem;
+    color: var(--black);
+}
+
+.titulo > span{
+    color: var(--primary-color);
+    font-size: 8rem;
+}
+/*Main Content*/
+.main-content{
+    font-size: 1.5rem;
+    font-weight: var(--semiBold);
+}
+
+.main-content > h2 > span{
+    color: var(--primary-color);
+}
+
+.main-content > h2{
+    font-weight: var(--bold);
+}
+
+/*Media querys*/
+@media screen and (max-width:768px) {
+    .encabezado-img > .animation> p{
+        font: var(--font);
+        font-weight: var(--semiBold);
+        color: var(--white);
+        font-size: 2rem;
+    }
+    .encabezado-img > .animation > h1{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 5rem;
+        color: var(--white);
+    }
+    .encabezado-img > .animation > h1 > span{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 4rem;
+        color: var(--primary-color);
+    }
+
+    .titulo{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 5rem;
+        color: var(--black);
+    }
+    
+    .titulo > span{
+        color: var(--primary-color);
+        font-size: 4rem;
+    }
+
+    .encabezado-img{
+        background-image: url(../assets/shutterstock_2148239031176.png);
+        height: 500px;
+        background-size: 120% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:425px){
+    .encabezado-img > .animation> p{
+        font: var(--font);
+        font-weight: var(--semiBold);
+        color: var(--white);
+        font-size: 1.5rem;
+    }
+    .encabezado-img > .animation > h1{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 4rem;
+        color: var(--white);
+    }
+    .encabezado-img > .animation > h1 > span{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 3rem;
+        color: var(--primary-color);
+    }
+
+    .titulo{
+        font: var(--font);
+        font-weight: var(--bold);
+        font-size: 4rem;
+        color: var(--black);
+    }
+    
+    .titulo > span{
+        color: var(--primary-color);
+        font-size: 3rem;
+    }
+
+    .encabezado-img{
+        background-image: url(../assets/bannerindexsizem.jpg);
+        height: 500px;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .burger{
+        display: flex !important;
+        justify-content: center !important;
+    }
+}

@@ -1,0 +1,74 @@
+/*Root*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+:root{
+    --font: 'Roboto Slab', serif;
+    --regular: 400;
+    --medium: 500;
+    --semiBold:600;
+    --bold:700;
+    --white: #ffffff;
+    --black: #000000;
+    --primary-color: #ffa600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+/*Navbar*/
+.navbar-brand{
+    font-size: 28px;
+}
+.navbar-brand > span {
+    color: var(--primary-color);
+}
+
+.titulo{
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: var(--bold);
+}
+
+legend{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: var(--semiBold);
+}
+
+.btn{
+    background-color: var(--primary-color);
+    font-weight: var(--semiBold);
+    color: var(--white);
+}
+
+.btn:hover{
+    background-color: var(--black);
+    font-weight: var(--semiBold);
+    color: var(--primary-color);
+}
+
+input, textarea{
+    border-color: var(--primary-color) !important;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: var(--primary-color);
+    padding-top: 5px;
+}
+
+/*mq*/
+
+@media screen and (max-width:465px) {
+    .burger{
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+    }
+}

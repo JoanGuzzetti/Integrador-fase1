@@ -1,0 +1,199 @@
+/*Root*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
+:root{
+    --font: 'Roboto Slab', serif;
+    --regular: 400;
+    --medium: 500;
+    --semiBold:600;
+    --bold:700;
+    --white: #ffffff;
+    --black: #000000;
+    --primary-color: #ffa600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+/*Navbar*/
+.navbar-brand{
+    font-size: 28px;
+}
+.navbar-brand > span {
+    color: var(--primary-color);
+}
+
+/*Encabezado*/
+.encabezado-img{
+    background-image: url(../assets/descarga.jpg);
+    height: 500px;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.encabezado-img > .animation> p{
+    font: var(--font);
+    font-weight: var(--bold);
+    color: var(--white);
+    font-size: 10rem;
+    
+}
+
+.animation{
+    animation-name: escala;
+    animation-duration: 0.5s;
+}
+
+@keyframes escala {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        transform: scale(0.2);
+    }
+    40%{
+        transform: scale(0.4);
+    }
+    60%{
+        transform: scale(0.6);
+    }
+    80%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.img-dev{
+    width: 450px;
+}
+.img-dev2{
+    width: 550px;
+    height: auto;
+}
+
+.titulo{
+    font-size: 4rem;
+    background-color: var(--primary-color);
+}
+
+.texto{
+    font-size: 1.2rem;
+}
+
+/*Carrousel*/
+
+.contenedor-carousel{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.imagenes{
+    display: flex;
+    width: 100%;
+}
+
+.imagenes > img {
+    height:  100%;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+
+.imagenes > input{
+    display: none;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.dots > label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid var(--primary-color) 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.dots label:hover{
+    background-color: var(--primary-color);
+}
+
+#estudiantes1:checked ~ .imagen1{
+    margin-left: 0;
+}
+#estudiantes2:checked ~ .imagen2{
+    margin-left: -100%;
+}
+#estudiantes3:checked ~ .imagen3{
+    margin-left: -200%;
+}
+#estudiantes4:checked ~ .imagen4{
+    margin-left: -300%;
+}
+#estudiantes5:checked ~ .imagen5{
+    margin-left: -400%;
+}
+#estudiantes6:checked ~ .imagen6{
+    margin-left: -500%;
+}
+
+/*MQ*/
+
+@media screen and (max-width:1100px) {
+    .encabezado-img > .animation> p{
+        font-size: 6rem;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .encabezado-img > .animation> p{
+        font-size: 4rem;
+    }
+
+    .img-dev{
+        width: 90vw;
+    }
+
+    .img-dev2{
+        width: 90vw;
+    }
+
+    .titulo{
+        font-size: 3rem;
+    }
+
+    .contenedor-carousel{
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width:465px) {
+    .encabezado-img > .animation> p{
+        font-size: 2rem;
+    }
+
+    .burger{
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
